@@ -26,7 +26,7 @@ Script5: Open Source Manifesto Generator
 Generates a simple manifesto using user input.
 
 ## How to Run
-
+```
 chmod +x script1.sh
 ./script1.sh
 
@@ -41,3 +41,4 @@ chmod +x script4.sh
 
 chmod +x script5.sh
 ./script5.sh
+```
