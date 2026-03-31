@@ -1,17 +1,9 @@
 #!/bin/bash
 
-echo "Enter a number:"
-read num
+# Script 4 - Log File Analyzer
 
-sum=0
-
-while [ $num -gt 0 ]
-do
-    rem=$((num % 10))
-    sum=$((sum + rem))
-    num=$((num / 10))
-done
-
-echo "Sum of digits is $sum"
+count=$(grep -i "root" /etc/passwd | wc -l)
 
 
+
+echo "Lines containing 'root' : $count"

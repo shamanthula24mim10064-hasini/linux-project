@@ -1,15 +1,17 @@
-#!/bin/bash
+#Script 3 -Disk and Permission Auditor
 
-echo "Enter a number:"
-read n
+DIRS="/home /etc /var"
 
-fact=1
+for d in $DIRS
+do
+    echo "Directory: $d"
+    echo "Disk Usage:"
+    du -sh $d 2>/dev/null
 
-for (( i=1; i<=n; i++))
-do 
-    fact=$((fact * i))
+    echo "Permissions:"
+    ls -ld $d
+
+    echo "=========================="
+
 done
-
-echo "Factorial of $n is $fact"
-
 

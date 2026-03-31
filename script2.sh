@@ -1,12 +1,17 @@
+
 #!/bin/bash
 
-echo "Enter a number:"
-read num 
+# Script 2 - FOSS Package Inspector 
 
-if [ $num -gt 0 ]
-then
-    echo "Number is positive"
+Package="libreoffice"
+
+if  command -v libreoffice >/dev/null 2>&1
+then 
+    echo "$PACKAGE is installed"
+    
+    libreoffice --version
+   
+    echo "LibreOffice: an open_source office suite for documents, spreadsheets,and presentations"
 else
-   echo "Number is negative or zero"
-fi
-
+    echo "$PACKAGE is not installed"
+fi      
